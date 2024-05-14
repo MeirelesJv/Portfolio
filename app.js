@@ -14,18 +14,3 @@ function clicar(clickedElement) {
     clickedElement.classList.add('devActiv');
 };
 
-function truncateParagraphs() {
-    const allParagraphs = document.querySelectorAll('p'); // Select all <p> elements
-    allParagraphs.forEach(paragraph => {
-      const textContent = paragraph.textContent;
-      if (textContent.length > 100) {
-        paragraph.textContent = textContent.substring(0, 100) + '...';
-      }
-    });
-}
-function checkScreenSize() {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 768) { // Adjust breakpoint as needed
-        truncateParagraphs();
-    }
-}
