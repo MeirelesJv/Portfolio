@@ -27,7 +27,5 @@ function checkScreenSize() {
     const screenWidth = window.innerWidth;
     if (screenWidth < 768) { // Adjust breakpoint as needed
         truncateParagraphs();
-    }else{
-        truncateParagraphs(0);
     }
 }

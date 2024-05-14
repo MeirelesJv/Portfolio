@@ -87,8 +87,7 @@ body{
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    overflow-y: auto;
+    
 
     .headerRigth{  
         font-size: 20px;
@@ -97,80 +96,89 @@ body{
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .grid {
+    .projects{
+        overflow: hidden;
+        overflow-y: auto;
         display: flex;
         flex-direction: column;
-        grid-gap: 10px;
-    }
-    .card {
-        background-color: #18181B;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1);
-        padding: 2px 16px 16px 16px;
-        border-radius: 15px;
-        cursor: pointer;
-        position: relative;
-        transition: box-shadow .25s;
-        margin: 5px;
-      
-        &::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          border-radius: 15px;
-        }
-      
-        .icon {
-          z-index: 2;
-          position: relative;
-          display: table;
-          padding: 10px;
-          color: #A1A1AA;
-          font-size: 12px;
-          
-          &::after {
-            content: '';
-            position: absolute;
-            inset: 4.5px;
-            border-radius: 15%;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            transition: background-color .25s, border-color .25s;
-          }
-        }
-        
-        .cardFooter{
+        grid-gap: 2px;
+
+        .grid {
             display: flex;
+            flex-direction: column;
+            grid-gap: 10px;
         }
-    
-        h4 {
-          z-index: 2;
-          position: relative;
-          margin: 12px 0 4px 0;
-          font-family: inherit;
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 2;
-          color: white;
-        }
-      
-        p {
-          z-index: 2;
-          position: relative;
-          margin: 0;
-          font-size: 14px;
-          line-height: 1.7;
-          color: #A1A1AA;
-        }
-        &:hover {
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.04), 0px 15px 25px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2);     
-          .icon {
-            &::after {
-              background-color: rgba(52, 211, 153, 0.1);
-              border-color: rgba(52, 211, 153, 0.2);
+        .card {
+            background-color: #18181B;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            padding: 2px 16px 16px 16px;
+            border-radius: 15px;
+            cursor: pointer;
+            position: relative;
+            transition: box-shadow .25s;
+            margin: 5px;
+          
+            &::before {
+              content: '';
+              position: absolute;
+              inset: 0;
+              border-radius: 15px;
+            }
+          
+            .icon {
+              z-index: 2;
+              position: relative;
+              display: table;
+              padding: 10px;
+              color: #A1A1AA;
+              font-size: 12px;
+              
+              &::after {
+                content: '';
+                position: absolute;
+                inset: 4.5px;
+                border-radius: 15%;
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                transition: background-color .25s, border-color .25s;
+              }
+            }
+            
+            .cardFooter{
+                display: flex;
+            }
+        
+            h4 {
+              z-index: 2;
+              position: relative;
+              margin: 12px 0 4px 0;
+              font-family: inherit;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 2;
+              color: white;
+            }
+          
+            p {
+              z-index: 2;
+              position: relative;
+              margin: 0;
+              font-size: 14px;
+              line-height: 1.7;
+              color: #A1A1AA;
+            }
+            &:hover {
+              box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.04), 0px 15px 25px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2);     
+              .icon {
+                &::after {
+                  background-color: rgba(52, 211, 153, 0.1);
+                  border-color: rgba(52, 211, 153, 0.2);
+                }
+              }
             }
           }
-        }
-      }
+    }
+    
 }
-.rigth::-webkit-scrollbar{
+.projects::-webkit-scrollbar{
     background-color: transparent;
 }
