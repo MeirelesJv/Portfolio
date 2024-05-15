@@ -24,8 +24,9 @@ body{
     flex: 1;
     display: flex;
     flex-direction: column;
+    
     .header{
-        height: 250px;
+        flex: 1;
         .name h1{
             font-size: 3rem;
             line-height: 1;
@@ -35,14 +36,15 @@ body{
         }
         .my{
             margin-top: 15px;
-            margin-right: 200px;
+            margin-right: 20px;
             color: #A1A1AA;
         }
     }
     
 
     .body{
-        height: 400px;
+        flex: 5;
+        padding-top: 50px;
         .icon{
             display: flex;
             gap: 10px;
@@ -71,6 +73,7 @@ body{
 
     
     .footer{
+        flex: 1;
         .icon{
             display: flex;
             font-size: 25px;
@@ -181,4 +184,59 @@ body{
 }
 .projects::-webkit-scrollbar{
     background-color: transparent;
+    
+}
+.my::-webkit-scrollbar{
+    background-color: transparent;
+    
+}
+
+
+@media screen and (max-width: 768px){
+    body{
+        overflow: auto;
+    }
+    body::-webkit-scrollbar{
+        background-color: transparent;
+    }
+    .container{
+        display: block;
+        margin: 0;
+    }
+    .left{
+        display: block;
+        
+        .header{
+            margin: 10px;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+        }
+        .body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 200px;
+            z-index: 3;
+            position: relative;
+            padding-top: 10px;
+            .icon{
+                max-width: none;
+                padding-top: 15px;
+            }
+            .dev{
+                font-size: 50px;
+                outline: none;
+                user-select: none;
+            }
+        }
+        .footer{
+            display: none;
+        }
+    }
+    
+    .projects{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 }
