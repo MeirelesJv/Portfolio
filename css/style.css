@@ -54,23 +54,14 @@ body{
             max-width: 12vh;
             margin-top: 10px;
         }
-        .icon:hover > :not(:hover){
-            transform: scale(0.8);
-        }
         .icon:hover{
             opacity: 1;
             color: white;
         }
         .dev{
             transition: .35s;
-            cursor: pointer;
             font-size: 30px;
             opacity: .4;
-        }
-        .devActiv{
-            opacity: 1;
-            transition: .35s;
-            cursor: pointer;
         }
     }
 
